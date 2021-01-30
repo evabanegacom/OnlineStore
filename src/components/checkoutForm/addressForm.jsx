@@ -62,7 +62,7 @@ const AddressForm = ({ checkoutToken, next }) => {
                 <FormInput name='email' label='Email'/>
                 <FormInput name='city' label='City'/>
                 <FormInput name='zip' label='Zip / POstal Code'/>
-                <FormInput name ='Phone Number' label='Phone Number'/>
+                <FormInput name ='phoneNumber' label='Phone Number'/>
 
                 <Grid item xs={12} sm={6}>
                   <InputLabel>Shipping Country</InputLabel>
