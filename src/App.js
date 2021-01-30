@@ -77,4 +77,11 @@ function App() {
   );
 }
 
+// MY API KEY
+// REACT_APP_CHEC_PUBLIC_KEY = pk_test_222704629bc00bf8eb4be9b5576641d7976593d0f0b05
+
+// HIS API KEY
+
+// REACT_APP_CHEC_PUBLIC_KEY=pk_test_19661763baf3194382812193e2e539617b1870f41d8b9
+
 export default App;
