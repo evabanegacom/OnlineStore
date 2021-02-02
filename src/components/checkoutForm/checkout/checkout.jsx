@@ -6,7 +6,7 @@ import { Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider,
 import { commerce } from '../../../lib/commerce';
 
 const steps = ['shipping addresss', 'payment details']
-const Checkout = ({ cart }) => {
+const Checkout = ({ cart,order, onCaptureCheckout, error }) => {
   const [activeStep, setActiveStep] = useState(0);
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [shippingData, setShippingData] = useState({})
@@ -41,7 +41,13 @@ const Checkout = ({ cart }) => {
 
   const Form = () => activeStep === 0 
     ? <AddressForm checkoutToken={checkoutToken} next={next} />
-    : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} backstep={backstep} />
+    : <PaymentForm 
+    shippingData={shippingData} 
+    checkoutToken={checkoutToken} 
+    backstep={backstep} 
+    onCaptureCheckout={onCaptureCheckout}
+    nextstep={nextstep}
+    />
     return (
         <>
           <div className={classes.toolbar} />
